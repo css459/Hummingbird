@@ -1,0 +1,51 @@
+Hummingbird
+Cole Smith -- Nauman Ahmad
+
+Tasks and Timeline
+
+* Login
+
+    - The top ones: FB, Twitter, Email-PWD
+
+* Audio Capture
+
+* UI / UX
+
+    - In listening genre, swift right to skip
+    - Fun animation that pulses to the beat
+    - Comment section
+        - Upvotes / Downvotes / Solved
+        - Pull up to view comment section
+
+    - Record section
+        - Press big button to record, 10 seconds?
+        - Written description
+        - Genre selection
+
+* Backend
+
+    - Firebase
+
+    JSON Example:
+
+        users [
+
+            {
+                UUID: "UUID"
+                name: "Full Name",
+                totalVotes: 0,
+                totalSongsSolved: 0,
+                netupvote: 0,
+                netdownvote: 0
+                . . . ?
+            }
+
+    - Objects
+
+        - humm
+            - audio snip
+            - description
+            - user posted
+            - upvotes
+            - downvotes
+            - genre
