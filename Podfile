@@ -6,6 +6,9 @@ target 'Hummingbird' do
   use_frameworks!
 
   pod 'Firebase'
+  pod 'Bolts'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
   # Pods for Hummingbird
 
 end
