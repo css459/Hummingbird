@@ -12,7 +12,6 @@
 		497F6F991D97327100EDB4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497F6F971D97327100EDB4EC /* Main.storyboard */; };
 		497F6F9B1D97327100EDB4EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497F6F9A1D97327100EDB4EC /* Assets.xcassets */; };
 		497F6F9E1D97327100EDB4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497F6F9C1D97327100EDB4EC /* LaunchScreen.storyboard */; };
-		82C4819B1D9733DB00EDF811 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82C4819A1D9733DB00EDF811 /* GoogleService-Info.plist */; };
 		9D33C8C666763ED0B38AE555 /* Pods_Hummingbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB1502B9C49F349C6959ED1 /* Pods_Hummingbird.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		497F6F9A1D97327100EDB4EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		497F6F9D1D97327100EDB4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		497F6F9F1D97327100EDB4EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82C4819A1D9733DB00EDF811 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		842BB0C24207562295F5F51D /* Pods-Hummingbird.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hummingbird.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hummingbird/Pods-Hummingbird.release.xcconfig"; sourceTree = "<group>"; };
 		DAB1502B9C49F349C6959ED1 /* Pods_Hummingbird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hummingbird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1D35628D41D67933B99D35 /* Pods-Hummingbird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hummingbird.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hummingbird/Pods-Hummingbird.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				497F6F9A1D97327100EDB4EC /* Assets.xcassets */,
 				497F6F9C1D97327100EDB4EC /* LaunchScreen.storyboard */,
 				497F6F9F1D97327100EDB4EC /* Info.plist */,
-				82C4819A1D9733DB00EDF811 /* GoogleService-Info.plist */,
 			);
 			path = Hummingbird;
 			sourceTree = "<group>";
@@ -155,7 +152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				497F6F9E1D97327100EDB4EC /* LaunchScreen.storyboard in Resources */,
-				82C4819B1D9733DB00EDF811 /* GoogleService-Info.plist in Resources */,
 				497F6F9B1D97327100EDB4EC /* Assets.xcassets in Resources */,
 				497F6F991D97327100EDB4EC /* Main.storyboard in Resources */,
 			);
