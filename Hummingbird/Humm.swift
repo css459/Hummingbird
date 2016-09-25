@@ -10,16 +10,19 @@ import UIKit
 import AVFoundation
 import Firebase
 
-class Humm: NSObject {
+class Humm {
     
     // MARK: - Class Properties
     
+    var key: String
     var poster: String?
     var audioFilePath: String?
     var upVotes: UInt?
     var downVotes: UInt?
     var netVotes: Int?
     var genre: Genres?
+    var completed: Bool = false
+    let ref: FIRDatabaseReference?
     
     enum Genres {
         case rock
@@ -29,7 +32,16 @@ class Humm: NSObject {
     
     // MARK: - Initalizers
     
-    override init() {
-        super.init()
+    init(snapshot: FIRDataSnapshot) {
+        
+        key = snapshot.key
+        poster = snapshot.value(forKey: "poster") as? String
+        audioFilePath = snapshot.value(forKey: "audioFilePath") as? String
+        upVotes = snapshot.value(forKey: "upVotes") as? UInt
+        downVotes = snapshot.value(forKey: "downVotes") as? UInt
+        netVotes = snapshot.value(forKey: "netVotes") as? Int
+        genre = snapshot.value(forKey: "genre") as? Genres
+        completed = (snapshot.value(forKey: "completed") as? Bool)!
+        ref = snapshot.ref
     }
 }
