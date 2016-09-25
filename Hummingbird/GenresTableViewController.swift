@@ -15,7 +15,7 @@ protocol SendGenreBack: class {
 class GenresTableViewController: UITableViewController {
     
     // MARK: - Class Properties
-    weak var delegate: SendGenreBack? = nil
+    weak var delegate: NewRecordingViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
