@@ -100,16 +100,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add any extra info about the song here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AC5-Ue-mHj">
-                                <color key="backgroundColor" red="1" green="0.678772178" blue="0.64253921629999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="0.2101247903" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heC-kq-TL7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heC-kq-TL7">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="5mW-KG-mIe"/>
-                                    <constraint firstAttribute="width" constant="77" id="zEu-17-3ge"/>
+                                    <constraint firstAttribute="width" constant="77" id="1ck-PB-rsn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Genre"/>
@@ -117,12 +110,24 @@
                                     <segue destination="5iA-iE-YeE" kind="show" identifier="toGenres" id="ymk-eF-7jl"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0EU-Ck-iku" customClass="DACircularProgressView">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0EU-Ck-iku" customClass="KYCircularProgress" customModule="KYCircularProgress">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.3198679250384715" blue="0.24315228056388882" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="guideLineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNO-9I-AKu">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="5cp-uD-tHB"/>
+                                    <constraint firstAttribute="width" constant="81" id="RUI-TQ-q9O"/>
                                 </constraints>
                                 <state key="normal" title="Record"/>
                                 <connections>
@@ -130,21 +135,37 @@
                                     <action selector="recordButtonUnpressed:" destination="iK9-8a-4aB" eventType="touchUpInside" id="rul-9a-iWd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0b-Nn-Ja1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="bab-3V-E1r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l71-Ze-VYs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="HjY-9o-LAx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Add Description"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.51120389470000005" blue="0.45607003229999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="AC5-Ue-mHj" firstAttribute="top" secondItem="heC-kq-TL7" secondAttribute="bottom" constant="8" symbolic="YES" id="FY6-pj-Ozn"/>
-                            <constraint firstItem="heC-kq-TL7" firstAttribute="leading" secondItem="DNz-Pe-k7V" secondAttribute="leadingMargin" id="GwN-Qb-ByC"/>
-                            <constraint firstItem="0EU-Ck-iku" firstAttribute="centerX" secondItem="AC5-Ue-mHj" secondAttribute="centerX" id="H9c-r1-Htf"/>
-                            <constraint firstItem="0EU-Ck-iku" firstAttribute="leading" secondItem="DNz-Pe-k7V" secondAttribute="leadingMargin" constant="96" id="LPg-Lk-TSk"/>
-                            <constraint firstItem="AC5-Ue-mHj" firstAttribute="trailing" secondItem="DNz-Pe-k7V" secondAttribute="trailingMargin" id="Nle-55-6dE"/>
-                            <constraint firstItem="0EU-Ck-iku" firstAttribute="top" secondItem="cNO-9I-AKu" secondAttribute="bottom" constant="8" symbolic="YES" id="SVh-JE-fcn"/>
-                            <constraint firstItem="cNO-9I-AKu" firstAttribute="centerX" secondItem="0EU-Ck-iku" secondAttribute="centerX" id="cEl-Sl-RJo"/>
-                            <constraint firstItem="0EU-Ck-iku" firstAttribute="centerY" secondItem="DNz-Pe-k7V" secondAttribute="centerY" id="gbt-SX-hgJ"/>
-                            <constraint firstItem="heC-kq-TL7" firstAttribute="top" secondItem="1ri-9a-D1M" secondAttribute="bottom" constant="412" id="hR6-hN-QXp"/>
-                            <constraint firstItem="cNO-9I-AKu" firstAttribute="top" secondItem="1ri-9a-D1M" secondAttribute="bottom" constant="156" id="kSq-S4-kqI"/>
-                            <constraint firstAttribute="bottom" secondItem="AC5-Ue-mHj" secondAttribute="bottom" constant="20" symbolic="YES" id="l1b-Gu-Q7x"/>
-                            <constraint firstItem="heC-kq-TL7" firstAttribute="leading" secondItem="AC5-Ue-mHj" secondAttribute="leading" id="yf0-RA-6lJ"/>
+                            <constraint firstItem="cNO-9I-AKu" firstAttribute="centerX" secondItem="DNz-Pe-k7V" secondAttribute="centerX" id="43k-qj-qp8"/>
+                            <constraint firstItem="0EU-Ck-iku" firstAttribute="centerY" secondItem="DNz-Pe-k7V" secondAttribute="centerY" id="7ct-pv-JRW"/>
+                            <constraint firstItem="l71-Ze-VYs" firstAttribute="top" secondItem="heC-kq-TL7" secondAttribute="bottom" constant="24" id="DP9-94-Ixs"/>
+                            <constraint firstItem="ZSO-9m-QAp" firstAttribute="top" secondItem="Y0b-Nn-Ja1" secondAttribute="bottom" constant="163" id="JA1-TO-A9g"/>
+                            <constraint firstItem="Y0b-Nn-Ja1" firstAttribute="top" secondItem="0EU-Ck-iku" secondAttribute="bottom" constant="74" id="MsF-Y3-NbH"/>
+                            <constraint firstItem="ZSO-9m-QAp" firstAttribute="top" secondItem="l71-Ze-VYs" secondAttribute="bottom" constant="104" id="OJN-xi-ptc"/>
+                            <constraint firstItem="heC-kq-TL7" firstAttribute="centerY" secondItem="Y0b-Nn-Ja1" secondAttribute="centerY" id="PVW-Ok-A5m"/>
+                            <constraint firstItem="cNO-9I-AKu" firstAttribute="centerX" secondItem="0EU-Ck-iku" secondAttribute="centerX" id="SR6-eO-baM"/>
+                            <constraint firstItem="Y0b-Nn-Ja1" firstAttribute="trailing" secondItem="DNz-Pe-k7V" secondAttribute="trailingMargin" id="e6b-dG-wsn"/>
+                            <constraint firstItem="0EU-Ck-iku" firstAttribute="top" secondItem="cNO-9I-AKu" secondAttribute="bottom" constant="8" symbolic="YES" id="hGx-8G-cYL"/>
+                            <constraint firstItem="heC-kq-TL7" firstAttribute="leading" secondItem="DNz-Pe-k7V" secondAttribute="leadingMargin" id="igE-ms-CmC"/>
+                            <constraint firstItem="heC-kq-TL7" firstAttribute="leading" secondItem="l71-Ze-VYs" secondAttribute="leading" id="qsi-Mf-bJ4"/>
+                            <constraint firstItem="0EU-Ck-iku" firstAttribute="leading" secondItem="DNz-Pe-k7V" secondAttribute="leadingMargin" constant="96" id="wCe-dr-FDr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Humm" id="otJ-zF-0Tk">
@@ -153,9 +174,15 @@
                                 <action selector="cancelPressed:" destination="iK9-8a-4aB" id="FnG-dd-cw4"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="CT2-1h-TNw">
+                            <connections>
+                                <action selector="submitPressed:" destination="iK9-8a-4aB" id="Amp-uw-mr7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="circlularProgress" destination="0EU-Ck-iku" id="oKn-nH-nw5"/>
+                        <outlet property="genreLabel" destination="Y0b-Nn-Ja1" id="1VK-8k-y76"/>
                         <outlet property="recordButton" destination="cNO-9I-AKu" id="YNv-Fr-vgH"/>
                     </connections>
                 </viewController>

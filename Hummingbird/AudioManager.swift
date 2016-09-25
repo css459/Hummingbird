@@ -82,6 +82,7 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url as URL)
+            try AVAudioSession.sharedInstance().overrideOutputAudioPort(.speaker)
             audioPlayer.prepareToPlay()
             audioPlayer.volume = 1.0
             audioPlayer.delegate = self
