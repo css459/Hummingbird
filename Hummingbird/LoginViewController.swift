@@ -28,19 +28,18 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        if let err = error {
+        if (error) != nil {
             // Process error
-            print(err.localizedDescription)
-        } else if result.isCancelled {
-            // Handle cancellations
-            print("cancelled")
+            let fbalert = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+            self.present(fbalert, animated: true, completion: nil)
         } else {
             // Navigate to other view
             let creds = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
             
             FIRAuth.auth()?.signIn(with: creds, completion: { (user, error) in
-                if let e = error {
-                    print(e)
+                if error != nil {
+                    let alert = UIAlertController(title: "Error", message: "Error Signing In", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
                 } else {
                     print(user?.displayName)
                 }
