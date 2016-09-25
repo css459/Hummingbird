@@ -66,11 +66,24 @@ class NewRecordingViewController: UIViewController {
             FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
                 if (FIRAuth.auth()?.currentUser) != nil {
                     let name = user?.displayName
+                    let storage = FIRStorage.storage()
+                    let storageRef = storage.reference(forURL: "gs://hummingbird-112df.appspot.com")
+                    
+                    let metadata = FIRStorageMetadata()
+                    metadata.contentType = "audio/m4a"
+                    
                     let humm = Humm(poster: name!, genre: "Rock", audioFilePath: m4aFiles[0].absoluteString)
                     let hummUserRef = self.ref.child((user?.uid)!)
                     let subRef = hummUserRef.childByAutoId()
                     let key = subRef.key
                     subRef.setValue(humm.toAnyObject())
+                    let uploadTask = storageRef.child("posts/\(key).m4a").putFile(m4aFiles[0], metadata: metadata);
+                    
+                    uploadTask.observe(.success) { snapshot in
+                        // Upload completed successfully
+                        print("[STORAGE]: UPLOAD DONE")
+                    }
+                    
                     print(key)
                     
                 }
