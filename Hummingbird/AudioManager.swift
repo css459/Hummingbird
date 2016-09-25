@@ -54,18 +54,23 @@ class AudioManager: NSObject, AVAudioRecorderDelegate {
     
     // MARK: - Recording
     
-    func takeRecording() {
+    func record() {
         startRecording()
         recordingTimer = Timer.scheduledTimer(
             timeInterval: RECORD_TIME,
             target: self,
-            selector: #selector(self.finishRecording),
+            selector: #selector(AudioManager.finishRecording),
             userInfo: nil,
             repeats: false
         )
     }
     
-    func startRecording() {
+    func stopRecording() {
+        recordingTimer.invalidate()
+        finishRecording()
+    }
+    
+    private func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("CurrentRecording.m4a")
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -86,13 +91,7 @@ class AudioManager: NSObject, AVAudioRecorderDelegate {
         }
     }
     
-
-    func recordingInterrupt() {
-        recordingTimer.invalidate()
-        finishRecording()
-    }
-    
-    func finishRecording() {
+    @objc private func finishRecording() {
         audioRecorder.stop()
         audioRecorder = nil
         print("[ INF ] Recording finished")
