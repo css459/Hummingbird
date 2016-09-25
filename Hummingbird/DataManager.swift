@@ -14,11 +14,7 @@ class DataManager: NSObject {
     
     // MARK: - Class Properties
     
-    let GENRES = [
-        "Rock",
-        "Inide",
-        "Electronic",
-    ]
+    // MARK: - Initalizers
     
     override private init() {
         super.init()

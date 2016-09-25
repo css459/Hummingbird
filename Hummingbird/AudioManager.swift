@@ -13,6 +13,8 @@ class AudioManager: NSObject, AVAudioRecorderDelegate {
     
     static let sharedManager: AudioManager = AudioManager()
     
+    // MARK: - Class Properties
+    
     let RECORD_TIME = 10.0
     
     var recordingSession: AVAudioSession!
@@ -71,6 +73,27 @@ class AudioManager: NSObject, AVAudioRecorderDelegate {
             finishRecording()
         }
     }
+    
+    // MARK: - Playback
+    
+    func playFromURL(url:NSURL) {
+        print("[ INF ] Playing audio from \(url)")
+        
+        do {
+            let player = try AVAudioPlayer(contentsOf: url as URL)
+            player.prepareToPlay()
+            player.volume = 1.0
+            player.play()
+        } catch let error as NSError {
+            print("[ ERR ] Could not play audio")
+            print(error.localizedDescription)
+        } catch {
+            print("[ ERR ] AVAudioPlayer init failed")
+        }
+        
+    }
+    
+    // MARK: -  Private Methods
     
     private func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("CurrentRecording.m4a")

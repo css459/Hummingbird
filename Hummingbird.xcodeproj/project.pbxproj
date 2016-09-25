@@ -50,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		491DE4481D9769CA0098CDE3 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				497F6FAA1D974D9500EDB4EC /* Humm.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		497F6F871D97327100EDB4EC = {
 			isa = PBXGroup;
 			children = (
@@ -72,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				497F6F931D97327100EDB4EC /* AppDelegate.swift */,
-				497F6FAA1D974D9500EDB4EC /* Humm.swift */,
 				497F6FA81D974B3600EDB4EC /* DataManager.swift */,
 				497F6FAE1D9757FC00EDB4EC /* AudioManager.swift */,
+				491DE4481D9769CA0098CDE3 /* Objects */,
 				497F6FA71D97468800EDB4EC /* View Controllers */,
 				497F6F971D97327100EDB4EC /* Main.storyboard */,
 				497F6F9A1D97327100EDB4EC /* Assets.xcassets */,
