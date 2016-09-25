@@ -157,7 +157,7 @@
 				TargetAttributes = {
 					497F6F8F1D97327100EDB4EC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 626TEZTB77;
+						DevelopmentTeam = 8KWT8DCUF8;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -383,7 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Hummingbird/Hummingbird.entitlements;
-				DEVELOPMENT_TEAM = 626TEZTB77;
+				DEVELOPMENT_TEAM = 8KWT8DCUF8;
 				INFOPLIST_FILE = Hummingbird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AhmadandSmith.Hummingbird;
@@ -398,7 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Hummingbird/Hummingbird.entitlements;
-				DEVELOPMENT_TEAM = 626TEZTB77;
+				DEVELOPMENT_TEAM = 8KWT8DCUF8;
 				INFOPLIST_FILE = Hummingbird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AhmadandSmith.Hummingbird;

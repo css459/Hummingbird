@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let _ = DataManager.sharedManager
         let am = AudioManager.sharedManager
         
-        am.requestMicrophone()
+        let _ = am.requestMicrophone()
     
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }

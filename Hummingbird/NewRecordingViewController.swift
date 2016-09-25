@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class NewRecordingViewController: UIViewController {
+    let ref = FIRDatabase.database().reference(withPath: "posts")
+    
 
     // MARK: - Outlets
     
@@ -60,6 +63,20 @@ class NewRecordingViewController: UIViewController {
         
             // if you want to filter the directory contents you can do like this:
             let m4aFiles = directoryContents.filter{ $0.pathExtension == "m4a" }
+            
+            FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
+                if (FIRAuth.auth()?.currentUser) != nil {
+                    let name = user?.displayName
+                    let humm = Humm(poster: name!, genre: "Rock", audioFilePath: m4aFiles[0].absoluteString)
+                    let hummUserRef = self.ref.child((user?.uid)!)
+                    let subRef = hummUserRef.childByAutoId()
+                    let key = subRef.key
+                    subRef.setValue(humm.toAnyObject())
+                    print(key)
+                    
+                }
+            })
+            
             am.playFromURL(url: m4aFiles[0] as NSURL)
             
         } catch let error as NSError {

@@ -11,5 +11,6 @@ target 'Hummingbird' do
   pod 'Bolts'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
-
+  pod 'Firebase/Storage'
+  
 end
