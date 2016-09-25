@@ -12,6 +12,14 @@ class DataManager: NSObject {
     
     static let sharedManager: DataManager = DataManager()
     
+    // MARK: - Class Properties
+    
+    let GENRES = [
+        "Rock",
+        "Inide",
+        "Electronic",
+    ]
+    
     override private init() {
         super.init()
     }

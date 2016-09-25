@@ -17,6 +17,8 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 
+*.pbxproj
+
 ## Other
 *.moved-aside
 *.xcuserstate
