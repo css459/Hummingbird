@@ -14,6 +14,7 @@ class Humm {
     
     // MARK: - Class Properties
     
+    let ref: FIRDatabaseReference?
     var key: String
     var poster: String?
     var audioFilePath: String?
@@ -21,9 +22,8 @@ class Humm {
     var downVotes: UInt = 0
     var netVotes: Int = 0
     var completed: Bool = false
-    let ref: FIRDatabaseReference?
     var genre: String?
-
+    var desc: String?
     static let genres = [
         "Rock",
         "Indie",
