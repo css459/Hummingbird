@@ -5,6 +5,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - DACircularProgress (2.3.1)
   - FBSDKCoreKit (4.14.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.14.0):
@@ -51,6 +52,7 @@ PODS:
 
 DEPENDENCIES:
   - Bolts
+  - DACircularProgress
   - FBSDKCoreKit
   - FBSDKLoginKit
   - Firebase/Auth
@@ -60,6 +62,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FBSDKCoreKit: 6e020b5db0b5bd1e01f5fb0902131befd129a502
   FBSDKLoginKit: da563567a108050ef83739c8c8c001ee9e25fa13
   Firebase: 6250071f0e2440a5c4c67b8cb6b868f868237ac3
@@ -74,6 +77,6 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
 
-PODFILE CHECKSUM: f818233a2eb2c9dfb19140d7d177196b8896b011
+PODFILE CHECKSUM: 29e53d3bcd0fbf050919dad30d0e14cbec39de42
 
 COCOAPODS: 1.0.1

@@ -8,9 +8,10 @@ target 'Hummingbird' do
   pod 'Firebase/Database'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
   pod 'Bolts'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
-  pod 'Firebase/Storage'
+  pod 'DACircularProgress'
   
 end
