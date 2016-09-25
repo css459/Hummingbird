@@ -66,8 +66,10 @@ class AudioManager: NSObject, AVAudioRecorderDelegate {
     }
     
     func stopRecording() {
-        recordingTimer.invalidate()
-        finishRecording()
+        if recordingTimer.isValid {
+            recordingTimer.invalidate()
+            finishRecording()
+        }
     }
     
     private func startRecording() {
