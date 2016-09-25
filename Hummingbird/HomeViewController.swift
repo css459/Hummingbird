@@ -25,6 +25,34 @@ class HomeViewController: UIViewController {
 //        }
     }
 
+    func tap() {
+        UIView.animate(withDuration: 0.15, animations: {
+            self.pausePlayImage.alpha = 0.0
+        }, completion: { _ in
+            if self.isPlaying {
+                // Paused
+                self.pausePlayImage.image = UIImage(named: "play")
+                self.pause()
+            } else {
+                // Playing
+                self.pausePlayImage.image = UIImage(named: "pause")
+                self.play()
+            }
+            self.isPlaying = !self.isPlaying
+            UIView.animate(withDuration: 0.15, animations: {
+                self.pausePlayImage.alpha = 1.0
+            })
+        })
+    }
+    
+    func pause() {
+        
+    }
+    
+    func play() {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
