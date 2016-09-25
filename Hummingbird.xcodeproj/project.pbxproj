@@ -71,7 +71,6 @@
 		497F6F921D97327100EDB4EC /* Hummingbird */ = {
 			isa = PBXGroup;
 			children = (
-				8229EB301D975A8E0081C2E4 /* Hummingbird.entitlements */,
 				497F6F931D97327100EDB4EC /* AppDelegate.swift */,
 				497F6FAA1D974D9500EDB4EC /* Humm.swift */,
 				497F6FA81D974B3600EDB4EC /* DataManager.swift */,
@@ -147,7 +146,7 @@
 				TargetAttributes = {
 					497F6F8F1D97327100EDB4EC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 8KWT8DCUF8;
+						DevelopmentTeam = 626TEZTB77;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -291,6 +290,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -340,6 +340,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -370,7 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Hummingbird/Hummingbird.entitlements;
-				DEVELOPMENT_TEAM = 8KWT8DCUF8;
+				DEVELOPMENT_TEAM = 626TEZTB77;
 				INFOPLIST_FILE = Hummingbird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AhmadandSmith.Hummingbird;
@@ -385,7 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Hummingbird/Hummingbird.entitlements;
-				DEVELOPMENT_TEAM = 8KWT8DCUF8;
+				DEVELOPMENT_TEAM = 626TEZTB77;
 				INFOPLIST_FILE = Hummingbird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AhmadandSmith.Hummingbird;

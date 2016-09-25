@@ -35,6 +35,13 @@ class NewRecordingViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func recordButtonPressed(_ sender: AnyObject) {
+        let am = AudioManager.sharedManager
+        am.record()
+    }
+    
+    @IBAction func recordButtonUnpressed(_ sender: AnyObject) {
+        let am = AudioManager.sharedManager
+        am.stopRecording()
     }
 
     /*

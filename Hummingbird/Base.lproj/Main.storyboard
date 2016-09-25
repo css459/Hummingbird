@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tQz-1V-aWw">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -87,7 +87,8 @@
                                 </constraints>
                                 <state key="normal" title="Record"/>
                                 <connections>
-                                    <action selector="recordButtonPressed:" destination="iK9-8a-4aB" eventType="touchUpInside" id="XKw-RF-np3"/>
+                                    <action selector="recordButtonPressed:" destination="iK9-8a-4aB" eventType="touchDown" id="4oj-eR-3Ol"/>
+                                    <action selector="recordButtonUnpressed:" destination="iK9-8a-4aB" eventType="touchUpInside" id="rul-9a-iWd"/>
                                 </connections>
                             </button>
                         </subviews>
