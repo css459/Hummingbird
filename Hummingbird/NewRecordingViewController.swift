@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import DACircularProgress
 
 class NewRecordingViewController: UIViewController {
     let ref = FIRDatabase.database().reference(withPath: "posts")
@@ -16,7 +15,6 @@ class NewRecordingViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var circlularProgress: DACircularProgressView!
     @IBOutlet weak var genreLabel: UILabel!
     
     // MARK: - Class Properties
