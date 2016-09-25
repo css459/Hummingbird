@@ -50,7 +50,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kd3-w7-dDM">
-                        <barButtonItem key="leftBarButtonItem" title="User Name" style="plain" id="SF7-F8-Ogb">
+                        <barButtonItem key="leftBarButtonItem" title="User Name" id="SF7-F8-Ogb">
                             <connections>
                                 <segue destination="lg7-Ym-9sL" kind="show" identifier="toUserPage" id="NVG-yP-jYf"/>
                             </connections>
