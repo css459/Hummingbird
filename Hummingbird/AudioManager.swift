@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class AudioManager: NSObject, AVAudioRecorderDelegate {
+class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
     static let sharedManager: AudioManager = AudioManager()
     
@@ -19,6 +19,7 @@ class AudioManager: NSObject, AVAudioRecorderDelegate {
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
+    var audioPlayer: AVAudioPlayer!
     var recordingTimer: Timer!
     
     override private init() {
@@ -80,17 +81,17 @@ class AudioManager: NSObject, AVAudioRecorderDelegate {
         print("[ INF ] Playing audio from \(url)")
         
         do {
-            let player = try AVAudioPlayer(contentsOf: url as URL)
-            player.prepareToPlay()
-            player.volume = 1.0
-            player.play()
+            audioPlayer = try AVAudioPlayer(contentsOf: url as URL)
+            audioPlayer.prepareToPlay()
+            audioPlayer.volume = 1.0
+            audioPlayer.delegate = self
+            audioPlayer.play()
         } catch let error as NSError {
             print("[ ERR ] Could not play audio")
             print(error.localizedDescription)
         } catch {
             print("[ ERR ] AVAudioPlayer init failed")
         }
-        
     }
     
     // MARK: -  Private Methods

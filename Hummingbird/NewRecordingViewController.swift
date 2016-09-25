@@ -14,6 +14,10 @@ class NewRecordingViewController: UIViewController {
     
     @IBOutlet weak var recordButton: UIButton!
     
+    // MARK: - Class Properties
+    
+    private let am = AudioManager.sharedManager
+    
     // MARK: - Initalizers
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,6 +54,7 @@ class NewRecordingViewController: UIViewController {
         
             // if you want to filter the directory contents you can do like this:
             let m4aFiles = directoryContents.filter{ $0.pathExtension == "m4a" }
+            am.playFromURL(url: m4aFiles[0] as NSURL)
             
         } catch let error as NSError {
             print(error.localizedDescription)
