@@ -8,8 +8,10 @@
 
 import UIKit
 import AVFoundation
+import Firebase
 
 class Humm: NSObject {
+    var desc: String!
     
     // MARK: - Initalizers
     
