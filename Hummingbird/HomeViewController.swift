@@ -13,16 +13,33 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameButton: UIBarButtonItem!
-    var name: String!
+    @IBOutlet weak var pausePlayImage: UIImageView!
+    
+    var name: String?
     var pageIndex: Int = 0
+    
+    var isPlaying: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.nameLabel.text = name
+        
         // Add a cute name label
-//        if let name = FIRAuth.auth()?.currentUser?.displayName {
-//            nameButton.title = name
-//        }
+        if let name = FIRAuth.auth()?.currentUser?.displayName {
+            nameButton.title = name
+        }
+        
+        // Logo view
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "logo_nav")
+        imageView.image = image
+        navigationItem.titleView = imageView
+        navigationController?.navigationBar.barTintColor = UIColor(red: 1.0, green: 130.0/255.0, blue: 116.0/255.0, alpha: 1.0)
+        
+        // Functionality for Pause / Play Image Button
+        pausePlayImage.isUserInteractionEnabled = true
+        pausePlayImage.tag = 0
+        pausePlayImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(HomeViewController.tap)))
     }
 
     func tap() {

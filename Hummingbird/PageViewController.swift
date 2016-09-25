@@ -26,26 +26,26 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         items.append(Humm(poster: "Test", posterUID: "tst", genre: "Rock", audioFilePath: "sss"))
         items.append(Humm(poster: "Hello", posterUID: "tst", genre: "Rock", audioFilePath: "sss"))
         
-        ref.observe(.value, with: { snapshot in
-            var newItems: [Humm] = []
-            
-            if let posts = snapshot.value as? [String: AnyObject] {
-                for post in posts as [String: AnyObject] {
-                    self.ref.child(post.0).observe(.value, with: { (snap) in
-                        if let hummItem = snap.value as? [String: AnyObject] {
-                            for item in hummItem as [String: AnyObject] {
-                                let newHumm = Humm(posterUID: post.0, key: item.key, snapshot: snap, data: item.value as! [String : AnyObject])
-                                newItems.append(newHumm)
-                            }
-                        }
-                    })
-                }
-            }
-            
-            self.items = newItems
-            self.dataSource = nil
-            self.dataSource = self
-        })
+//        ref.observe(.value, with: { snapshot in
+//            var newItems: [Humm] = []
+//            
+//            if let posts = snapshot.value as? [String: AnyObject] {
+//                for post in posts as [String: AnyObject] {
+//                    self.ref.child(post.0).observe(.value, with: { (snap) in
+//                        if let hummItem = snap.value as? [String: AnyObject] {
+//                            for item in hummItem as [String: AnyObject] {
+//                                let newHumm = Humm(posterUID: post.0, key: item.key, snapshot: snap, data: item.value as! [String : AnyObject])
+//                                newItems.append(newHumm)
+//                            }
+//                        }
+//                    })
+//                }
+//            }
+//            
+//            self.items = newItems
+//            self.dataSource = nil
+//            self.dataSource = self
+//        })
         
         self.setViewControllers([getViewControllerAtIndex(index: 0)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
     }

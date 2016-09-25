@@ -14,7 +14,8 @@ class Humm {
     
     // MARK: - Class Properties
     
-    var key: String = ""
+    let ref: FIRDatabaseReference?
+    var key: String
     var poster: String?
     var posterUID: String?
     var audioFilePath: String?

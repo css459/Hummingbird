@@ -68,28 +68,7 @@ class NewRecordingViewController: UIViewController, SendGenreBack, SendDescBack 
             
             throwErrorMessage(title: "Not Complete", message: "All fields are required")
             
-            FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
-                if (FIRAuth.auth()?.currentUser) != nil {
-                    let name = user?.displayName
-                    let storage = FIRStorage.storage()
-                    let storageRef = storage.reference(forURL: "gs://hummingbird-112df.appspot.com")
-                    
-                    let metadata = FIRStorageMetadata()
-                    metadata.contentType = "audio/m4a"
-                    
-                    self.newHumm = Humm(poster: name!, posterUID: (user?.uid)!, genre: self.genreLabel.text!, audioFilePath: m4aFiles[0].absoluteString)
-                    let hummUserRef = self.ref.child((user?.uid)!)
-                    let subRef = hummUserRef.childByAutoId()
-                    let key = subRef.key
-                    subRef.setValue(self.newHumm?.toAnyObject())
-                    
-                    let uploadTask = storageRef.child("posts/\(key).m4a").putFile(m4aFiles[0], metadata: metadata);
-                    uploadTask.observe(.success) { snapshot in
-                        // Upload completed successfully
-                        print("[ STORAGE ]: UPLOAD DONE")
-                    }
-                }
-            })
+        } else {
             
             let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             do {
@@ -108,7 +87,8 @@ class NewRecordingViewController: UIViewController, SendGenreBack, SendDescBack 
                         let metadata = FIRStorageMetadata()
                         metadata.contentType = "audio/m4a"
                         
-                        self.newHumm = Humm(poster: name!, genre: "Rock", audioFilePath: m4aFiles[0].absoluteString)
+                        self.newHumm = Humm(poster: name!, posterUID: (user?.uid)!, genre: self.genre!, audioFilePath: m4aFiles[0].absoluteString)
+                        
                         self.newHumm?.genre = self.genre
                         self.newHumm?.desc = self.desc
                         let hummUserRef = self.ref.child((user?.uid)!)
