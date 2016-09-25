@@ -174,7 +174,7 @@
 				TargetAttributes = {
 					497F6F8F1D97327100EDB4EC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 8KWT8DCUF8;
+						DevelopmentTeam = 626TEZTB77;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {

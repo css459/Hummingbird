@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import DACircularProgress
 
 class NewRecordingViewController: UIViewController {
     let ref = FIRDatabase.database().reference(withPath: "posts")
@@ -15,6 +16,7 @@ class NewRecordingViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var circlularProgress: DACircularProgressView!
     
     // MARK: - Class Properties
     
@@ -32,6 +34,12 @@ class NewRecordingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        circlularProgress.roundedCorners = 0
+        circlularProgress.trackTintColor = UIColor.red
+        circlularProgress.backgroundColor = UIColor.clear
+        circlularProgress.progress = 0.0
+        circlularProgress.isHidden = true
     }
     
     // MARK: - Animations
@@ -43,6 +51,13 @@ class NewRecordingViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func recordButtonPressed(_ sender: AnyObject) {
+        
+//        circlularProgress.isHidden = false
+//        UIView.animate(withDuration: 10.0, animations: {
+//            self.circlularProgress.progress += 0.1
+//            }, completion: { success in
+//        })
+        
         let am = AudioManager.sharedManager
         am.record()
     }
@@ -52,6 +67,12 @@ class NewRecordingViewController: UIViewController {
     }
     
     @IBAction func recordButtonUnpressed(_ sender: AnyObject) {
+        
+//        let layer = circlularProgress.layer.presentation()! as CALayer
+//        let frame = layer.frame
+//        circlularProgress.layer.removeAllAnimations()
+//        circlularProgress.frame = frame
+        
         let am = AudioManager.sharedManager
         am.stopRecording()
         
@@ -95,6 +116,8 @@ class NewRecordingViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
+    
+    // MARK: - Delegate Methods
     
     // Implemented from delegate to get the genre
     func sendGenre(genre: String) {
