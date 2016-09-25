@@ -91,6 +91,17 @@
                                     <action selector="recordButtonUnpressed:" destination="iK9-8a-4aB" eventType="touchUpInside" id="rul-9a-iWd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heC-kq-TL7">
+                                <frame key="frameInset" minX="16" minY="476" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Genre"/>
+                                <connections>
+                                    <segue destination="5iA-iE-YeE" kind="popoverPresentation" identifier="toGenres" popoverAnchorView="heC-kq-TL7" id="0jA-7i-apd">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.51120389470000005" blue="0.45607003229999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -112,6 +123,44 @@
             </objects>
             <point key="canvasLocation" x="2652" y="58.920539730134934"/>
         </scene>
+        <!--Genres-->
+        <scene sceneID="Bg0-Fj-6k5">
+            <objects>
+                <tableViewController title="Genres" id="5iA-iE-YeE" customClass="GenresTableViewController" customModule="Hummingbird" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jMf-UY-jtK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.51120389470000005" blue="0.45607003229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" textLabel="kw6-ay-sQc" style="IBUITableViewCellStyleDefault" id="5mp-3s-hBV">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5mp-3s-hBV" id="Drb-Ub-fG4">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Rock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kw6-ay-sQc">
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.678772178" blue="0.64253921629999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5iA-iE-YeE" id="75P-Hx-TtV"/>
+                            <outlet property="delegate" destination="5iA-iE-YeE" id="rRl-nM-J5i"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4M-IH-96v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3428" y="59"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ymC-Uw-nD0">
             <objects>
@@ -131,4 +180,5 @@
             <point key="canvasLocation" x="877.60000000000002" y="58.920539730134934"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.2101247903" alpha="1" colorSpace="calibratedWhite"/>
 </document>

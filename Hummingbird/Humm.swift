@@ -19,13 +19,19 @@ class Humm: NSObject {
     var upVotes: UInt?
     var downVotes: UInt?
     var netVotes: Int?
-    var genre: Genres?
+    var genre: String?
+
+    static let genres = [
+        "Rock",
+        "Indie",
+        "Electronic"
+    ]
     
-    enum Genres {
-        case rock
-        case indie
-        case electronic
-    }
+//    enum Genres {
+//        case rock
+//        case indie
+//        case electronic
+//    }
     
     // MARK: - Initalizers
     
