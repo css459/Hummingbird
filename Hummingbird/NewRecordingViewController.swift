@@ -42,6 +42,18 @@ class NewRecordingViewController: UIViewController {
     @IBAction func recordButtonUnpressed(_ sender: AnyObject) {
         let am = AudioManager.sharedManager
         am.stopRecording()
+        
+        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        do {
+            // Get the directory contents urls (including subfolders urls)
+            let directoryContents = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil, options: [])
+        
+            // if you want to filter the directory contents you can do like this:
+            let m4aFiles = directoryContents.filter{ $0.pathExtension == "m4a" }
+            
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 
     /*

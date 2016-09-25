@@ -10,14 +10,6 @@ import UIKit
 import AVFoundation
 import Firebase
 
-class Humm: NSObject {
-    var desc: String!
-    let humm: AudioManager!
-    let completed: Bool!
+struct Humm {
     
-    // MARK: - Audio Functions
-    
-    func takeRecording() {
-        
-    }
 }
