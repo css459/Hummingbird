@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Firebase
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
@@ -34,6 +35,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             print("cancelled")
         } else {
             // Navigate to other view
+            let creds = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            FIRAuth.auth()?.signIn(with: creds, completion: { (user, error) in
+                print(user)
+            })
+            
             print("success")
         }
     
