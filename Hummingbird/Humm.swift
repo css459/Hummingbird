@@ -12,12 +12,8 @@ import Firebase
 
 class Humm: NSObject {
     var desc: String!
-    
-    // MARK: - Initalizers
-    
-    override init() {
-        super.init()
-    }
+    let humm: AudioManager!
+    let completed: Bool!
     
     // MARK: - Audio Functions
     
