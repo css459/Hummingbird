@@ -29,15 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Request the microphone
         _ = am.requestMicrophone()
         
-//        // Check already logged in
-//        if FIRAuth.auth()?.currentUser != nil {
-//            // User is signed in
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let rootController = storyboard.instantiateViewController(withIdentifier: "HomeNav") as! UINavigationController
-//            if let window = self.window{
-//                window.rootViewController = rootController
-//            }
-//        }
+        // Check already logged in
+        if FIRAuth.auth()?.currentUser != nil {
+            // User is signed in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let rootController = storyboard.instantiateViewController(withIdentifier: "HomeNav") as! UINavigationController
+            if let window = self.window{
+                window.rootViewController = rootController
+            }
+        }
     
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
