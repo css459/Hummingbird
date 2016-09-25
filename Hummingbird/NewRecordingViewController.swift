@@ -14,6 +14,12 @@ class NewRecordingViewController: UIViewController {
     
     @IBOutlet weak var recordButton: UIButton!
     
+    // MARK: - Class Properties
+    
+    private let am = AudioManager.sharedManager
+    
+    var newHumm: Humm?
+    
     // MARK: - Initalizers
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,10 +32,14 @@ class NewRecordingViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        print(newHumm?.genre)
+    }
+    
     // MARK: - Animations
     
     func drawRecordingAnimation(view: UIView) {
-        
+        // TODO: -
     }
     
     // MARK: - Actions
@@ -57,14 +67,14 @@ class NewRecordingViewController: UIViewController {
         }
     }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toGenres" {
+            let vc = segue.destination as! GenresTableViewController
+            vc.humm = newHumm
+            vc.backRef = self
+        }
     }
-    */
-
 }

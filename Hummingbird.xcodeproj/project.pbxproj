@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491DE44A1D9783010098CDE3 /* GenresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DE4491D9783010098CDE3 /* GenresTableViewController.swift */; };
 		497F6F941D97327100EDB4EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F6F931D97327100EDB4EC /* AppDelegate.swift */; };
 		497F6F961D97327100EDB4EC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F6F951D97327100EDB4EC /* LoginViewController.swift */; };
 		497F6F991D97327100EDB4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497F6F971D97327100EDB4EC /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		491DE4491D9783010098CDE3 /* GenresTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenresTableViewController.swift; sourceTree = "<group>"; };
 		497F6F901D97327100EDB4EC /* Hummingbird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hummingbird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497F6F931D97327100EDB4EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497F6F951D97327100EDB4EC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				497F6F951D97327100EDB4EC /* LoginViewController.swift */,
 				497F6FA51D97468000EDB4EC /* NewRecordingViewController.swift */,
+				491DE4491D9783010098CDE3 /* GenresTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -154,7 +157,7 @@
 				TargetAttributes = {
 					497F6F8F1D97327100EDB4EC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 8KWT8DCUF8;
+						DevelopmentTeam = 626TEZTB77;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -254,6 +257,7 @@
 				497F6FA91D974B3600EDB4EC /* DataManager.swift in Sources */,
 				497F6F941D97327100EDB4EC /* AppDelegate.swift in Sources */,
 				497F6FAB1D974D9500EDB4EC /* Humm.swift in Sources */,
+				491DE44A1D9783010098CDE3 /* GenresTableViewController.swift in Sources */,
 				497F6FA61D97468000EDB4EC /* NewRecordingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Hummingbird/Hummingbird.entitlements;
-				DEVELOPMENT_TEAM = 8KWT8DCUF8;
+				DEVELOPMENT_TEAM = 626TEZTB77;
 				INFOPLIST_FILE = Hummingbird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AhmadandSmith.Hummingbird;
@@ -394,7 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Hummingbird/Hummingbird.entitlements;
-				DEVELOPMENT_TEAM = 8KWT8DCUF8;
+				DEVELOPMENT_TEAM = 626TEZTB77;
 				INFOPLIST_FILE = Hummingbird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AhmadandSmith.Hummingbird;

@@ -20,15 +20,15 @@ class Humm {
     var upVotes: UInt?
     var downVotes: UInt?
     var netVotes: Int?
-    var genre: Genres?
     var completed: Bool = false
     let ref: FIRDatabaseReference?
-    
-    enum Genres {
-        case rock
-        case indie
-        case electronic
-    }
+    var genre: String?
+
+    static let genres = [
+        "Rock",
+        "Indie",
+        "Electronic"
+    ]
     
     // MARK: - Initalizers
     
@@ -40,7 +40,7 @@ class Humm {
         upVotes = snapshot.value(forKey: "upVotes") as? UInt
         downVotes = snapshot.value(forKey: "downVotes") as? UInt
         netVotes = snapshot.value(forKey: "netVotes") as? Int
-        genre = snapshot.value(forKey: "genre") as? Genres
+        genre = snapshot.value(forKey: "genre") as? String
         completed = (snapshot.value(forKey: "completed") as? Bool)!
         ref = snapshot.ref
     }
