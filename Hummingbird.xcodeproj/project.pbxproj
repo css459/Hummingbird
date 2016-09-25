@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		491DE44A1D9783010098CDE3 /* GenresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DE4491D9783010098CDE3 /* GenresTableViewController.swift */; };
+		491DE44C1D9791520098CDE3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DE44B1D9791520098CDE3 /* HomeViewController.swift */; };
 		497F6F941D97327100EDB4EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F6F931D97327100EDB4EC /* AppDelegate.swift */; };
 		497F6F961D97327100EDB4EC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F6F951D97327100EDB4EC /* LoginViewController.swift */; };
 		497F6F991D97327100EDB4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497F6F971D97327100EDB4EC /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		491DE4491D9783010098CDE3 /* GenresTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenresTableViewController.swift; sourceTree = "<group>"; };
+		491DE44B1D9791520098CDE3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		497F6F901D97327100EDB4EC /* Hummingbird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hummingbird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497F6F931D97327100EDB4EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497F6F951D97327100EDB4EC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				497F6F951D97327100EDB4EC /* LoginViewController.swift */,
+				491DE44B1D9791520098CDE3 /* HomeViewController.swift */,
 				497F6FA51D97468000EDB4EC /* NewRecordingViewController.swift */,
 				491DE4491D9783010098CDE3 /* GenresTableViewController.swift */,
 			);
@@ -255,6 +258,7 @@
 				497F6FAF1D9757FC00EDB4EC /* AudioManager.swift in Sources */,
 				497F6F961D97327100EDB4EC /* LoginViewController.swift in Sources */,
 				497F6FA91D974B3600EDB4EC /* DataManager.swift in Sources */,
+				491DE44C1D9791520098CDE3 /* HomeViewController.swift in Sources */,
 				497F6F941D97327100EDB4EC /* AppDelegate.swift in Sources */,
 				497F6FAB1D974D9500EDB4EC /* Humm.swift in Sources */,
 				491DE44A1D9783010098CDE3 /* GenresTableViewController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewRecordingViewController: UIViewController {
+class NewRecordingViewController: UIViewController, SendGenreBack {
 
     // MARK: - Outlets
     
@@ -32,10 +32,6 @@ class NewRecordingViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        print(newHumm?.genre)
-    }
-    
     // MARK: - Animations
     
     func drawRecordingAnimation(view: UIView) {
@@ -47,6 +43,10 @@ class NewRecordingViewController: UIViewController {
     @IBAction func recordButtonPressed(_ sender: AnyObject) {
         let am = AudioManager.sharedManager
         am.record()
+    }
+    
+    @IBAction func cancelPressed(_ sender: AnyObject) {
+        _ = navigationController?.popViewController(animated: true)
     }
     
     @IBAction func recordButtonUnpressed(_ sender: AnyObject) {
@@ -66,6 +66,11 @@ class NewRecordingViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
+    
+    // Implemented from delegate to get the genre
+    func sendGenre(genre: String) {
+        newHumm?.genre = genre
+    }
 
     
     // MARK: - Navigation
@@ -73,8 +78,7 @@ class NewRecordingViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toGenres" {
             let vc = segue.destination as! GenresTableViewController
-            vc.humm = newHumm
-            vc.backRef = self
+            vc.delegate = self
         }
     }
 }
