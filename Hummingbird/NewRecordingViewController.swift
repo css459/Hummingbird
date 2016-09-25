@@ -35,11 +35,11 @@ class NewRecordingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        circlularProgress.roundedCorners = 0
-        circlularProgress.trackTintColor = UIColor.red
-        circlularProgress.backgroundColor = UIColor.clear
-        circlularProgress.progress = 0.0
-        circlularProgress.isHidden = true
+//        circlularProgress.roundedCorners = 0
+//        circlularProgress.trackTintColor = UIColor.red
+//        circlularProgress.backgroundColor = UIColor.clear
+//        circlularProgress.progress = 0.0
+//        circlularProgress.isHidden = true
     }
     
     // MARK: - Animations
@@ -59,7 +59,7 @@ class NewRecordingViewController: UIViewController {
 //        })
         
         let am = AudioManager.sharedManager
-        am.record()
+//        am.record()
     }
     
     @IBAction func cancelPressed(_ sender: AnyObject) {
