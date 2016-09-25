@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tQz-1V-aWw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -29,6 +29,7 @@
                     </view>
                     <connections>
                         <outlet property="facebookLogin" destination="qxm-7s-PZC" id="6yd-VV-iO6"/>
+                        <segue destination="tQz-1V-aWw" kind="show" identifier="toHome" id="NCR-43-hhx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,9 +98,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Genre"/>
                                 <connections>
-                                    <segue destination="5iA-iE-YeE" kind="popoverPresentation" identifier="toGenres" popoverAnchorView="heC-kq-TL7" id="0jA-7i-apd">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="5iA-iE-YeE" kind="presentation" identifier="toGenres" id="0jA-7i-apd"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -42,6 +42,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                     self.present(alert, animated: true, completion: nil)
                 } else {
                     print(user?.displayName)
+                    self.performSegue(withIdentifier: "toHome", sender: self)
                 }
             })
         }
