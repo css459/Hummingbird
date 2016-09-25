@@ -50,16 +50,43 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kd3-w7-dDM">
+                        <barButtonItem key="leftBarButtonItem" title="User Name" style="plain" id="SF7-F8-Ogb">
+                            <connections>
+                                <segue destination="lg7-Ym-9sL" kind="show" identifier="toUserPage" id="NVG-yP-jYf"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nWt-54-C6D">
                             <connections>
                                 <segue destination="iK9-8a-4aB" kind="show" id="AYA-7b-g3Q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameButton" destination="SF7-F8-Ogb" id="lZm-1n-DSA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yam-86-emk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1816.8" y="58.920539730134934"/>
+        </scene>
+        <!--My Posts-->
+        <scene sceneID="rwz-hh-W2k">
+            <objects>
+                <viewController id="lg7-Ym-9sL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="12g-KP-J8d"/>
+                        <viewControllerLayoutGuide type="bottom" id="n18-u7-bvF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YBx-9u-rYk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Posts" id="b5a-Mi-38A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oIm-3N-fui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1817" y="782"/>
         </scene>
         <!--New Recording-->
         <scene sceneID="1Ty-FE-oKZ">
