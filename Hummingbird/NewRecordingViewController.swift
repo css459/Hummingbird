@@ -71,7 +71,6 @@ class NewRecordingViewController: UIViewController, SendGenreBack {
     func sendGenre(genre: String) {
         newHumm?.genre = genre
     }
-
     
     // MARK: - Navigation
 
