@@ -11,15 +11,18 @@ import Firebase
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameButton: UIBarButtonItem!
+    var name: String!
+    var pageIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.nameLabel.text = name
         // Add a cute name label
-        if let name = FIRAuth.auth()?.currentUser?.displayName {
-            nameButton.title = name
-        }
+//        if let name = FIRAuth.auth()?.currentUser?.displayName {
+//            nameButton.title = name
+//        }
     }
 
     /*

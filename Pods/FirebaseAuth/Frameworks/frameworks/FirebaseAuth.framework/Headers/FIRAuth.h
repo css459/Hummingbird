@@ -122,7 +122,6 @@ typedef void (^FIRSendPasswordResetCallback)(NSError *_Nullable error);
         - @c FIRAuthErrorCodeUserDisabled Indicates the user's account is disabled.
         - @c FIRAuthErrorCodeWrongPassword Indicates the user attempted sign in with an incorrect
             password.
-        - @c FIRAuthErrorCodeInvalidEmail - Indicates the email address is malformed.
         - See @c FIRAuthErrors for a list of error codes that are common to all API methods.
  */
 - (void)signInWithEmail:(NSString *)email
@@ -151,7 +150,6 @@ typedef void (^FIRSendPasswordResetCallback)(NSError *_Nullable error);
         - @c FIRAuthErrorCodeUserDisabled Indicates the user's account is disabled.
         - @c FIRAuthErrorCodeWrongPassword Indicates the user attempted sign in with a incorrect
             password, if credential is of the type EmailPasswordAuthCredential.
-        - @c FIRAuthErrorCodeInvalidEmail - Indicates the email address is malformed.
         - See @c FIRAuthErrors for a list of error codes that are common to all API methods.
  */
 - (void)signInWithCredential:(FIRAuthCredential *)credential
@@ -223,7 +221,7 @@ typedef void (^FIRSendPasswordResetCallback)(NSError *_Nullable error);
         describes the problem; is nil otherwise.
     @return @YES when the sign out request was successful. @NO otherwise.
     @remarks Possible error codes:
-        - @c FIRAuthErrorCodeKeychainError Indicates an error occurred when accessing the keychain.
+        - @c FIRAuthErrorCodeKeychainError Indicated an error occurred when accessing the keychain.
             The @c NSLocalizedFailureReasonErrorKey field in the @c NSError.userInfo dictionary
             will contain more information about the error encountered.
  */

@@ -14,8 +14,9 @@ class Humm {
     
     // MARK: - Class Properties
     
-    var key: String
+    var key: String = ""
     var poster: String?
+    var posterUID: String?
     var audioFilePath: String?
     var upVotes: UInt = 0
     var downVotes: UInt = 0
@@ -32,21 +33,24 @@ class Humm {
     
     // MARK: - Initalizers
     
-    init(snapshot: FIRDataSnapshot) {
+    init(posterUID: String, key: String, snapshot: FIRDataSnapshot, data: [String: AnyObject]) {
         
-        key = snapshot.key
-        poster = snapshot.value(forKey: "poster") as? String
-        audioFilePath = snapshot.value(forKey: "audioFilePath") as? String
-        upVotes = (snapshot.value(forKey: "upVotes") as? UInt)!
-        downVotes = (snapshot.value(forKey: "downVotes") as? UInt)!
-        netVotes = (snapshot.value(forKey: "netVotes") as? Int)!
-        genre = snapshot.value(forKey: "genre") as? String
-        completed = (snapshot.value(forKey: "completed") as? Bool)!
+        self.posterUID = posterUID
         ref = snapshot.ref
+        self.key = key
+        
+        poster = data["poster"] as? String
+        audioFilePath = data["audioFilePath"] as? String
+        upVotes = (data["upVotes"] as? UInt)!
+        downVotes = (data["downVotes"] as? UInt)!
+        netVotes = (data["netVotes"] as? Int)!
+        genre = data["genre"] as? String
+        completed = (data["completed"] as? Bool)!
     }
     
-    init(key: String = " ", poster: String, genre: String, audioFilePath: String) {
+    init(key: String = " ", poster: String, posterUID: String, genre: String, audioFilePath: String) {
         self.key = key
+        self.posterUID = posterUID
         self.poster = poster
         self.genre = genre
         self.ref = nil

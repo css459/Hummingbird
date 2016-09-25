@@ -12,5 +12,5 @@ target 'Hummingbird' do
   pod 'Bolts'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
-  
+  pod "TabPageViewController"
 end

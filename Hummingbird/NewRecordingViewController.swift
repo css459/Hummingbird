@@ -67,19 +67,17 @@ class NewRecordingViewController: UIViewController {
                     let metadata = FIRStorageMetadata()
                     metadata.contentType = "audio/m4a"
                     
-                    self.newHumm = Humm(poster: name!, genre: "Rock", audioFilePath: m4aFiles[0].absoluteString)
+                    self.newHumm = Humm(poster: name!, posterUID: (user?.uid)!, genre: self.genreLabel.text!, audioFilePath: m4aFiles[0].absoluteString)
                     let hummUserRef = self.ref.child((user?.uid)!)
                     let subRef = hummUserRef.childByAutoId()
                     let key = subRef.key
                     subRef.setValue(self.newHumm?.toAnyObject())
+                    
                     let uploadTask = storageRef.child("posts/\(key).m4a").putFile(m4aFiles[0], metadata: metadata);
                     uploadTask.observe(.success) { snapshot in
                         // Upload completed successfully
                         print("[ STORAGE ]: UPLOAD DONE")
                     }
-                    
-                    print(key)
-                    
                 }
             })
             

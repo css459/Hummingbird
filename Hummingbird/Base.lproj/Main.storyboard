@@ -7,6 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="chp-7p-3W1">
+            <objects>
+                <pageViewController storyboardIdentifier="Page" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="lpI-Zz-hG3" customClass="PageViewController" customModule="Hummingbird" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="EQk-Yi-kpQ"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXi-ss-IbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="59"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -29,17 +39,17 @@
                     </view>
                     <connections>
                         <outlet property="facebookLogin" destination="qxm-7s-PZC" id="6yd-VV-iO6"/>
-                        <segue destination="tQz-1V-aWw" kind="show" identifier="toHome" id="NCR-43-hhx"/>
+                        <segue destination="9iG-Kz-Qdj" kind="show" identifier="toHome" id="BAu-Xg-bLE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="58.920539730134934"/>
+            <point key="canvasLocation" x="-802" y="59"/>
         </scene>
         <!--Home-->
         <scene sceneID="MNJ-QW-ZU7">
             <objects>
-                <viewController storyboardIdentifier="Home" title="Home" id="dge-fi-Zzi" customClass="HomeViewController" customModule="Hummingbird" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dge-fi-Zzi" customClass="HomeViewController" customModule="Hummingbird" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Rg-p9-UUz"/>
                         <viewControllerLayoutGuide type="bottom" id="xXL-dH-qOy"/>
@@ -47,6 +57,15 @@
                     <view key="view" contentMode="scaleToFill" id="7wD-x1-Yhx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKM-nV-DpX">
+                                <frame key="frameInset" minX="38" minY="323" width="297" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kd3-w7-dDM">
@@ -63,6 +82,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nameButton" destination="SF7-F8-Ogb" id="lZm-1n-DSA"/>
+                        <outlet property="nameLabel" destination="fKM-nV-DpX" id="Nlk-ze-abG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yam-86-emk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -86,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIm-3N-fui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1817" y="782"/>
+            <point key="canvasLocation" x="1817" y="846"/>
         </scene>
         <!--New Recording-->
         <scene sceneID="1Ty-FE-oKZ">
@@ -180,7 +200,7 @@
                         <color key="backgroundColor" red="1" green="0.51120389470000005" blue="0.45607003229999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" textLabel="kw6-ay-sQc" style="IBUITableViewCellStyleDefault" id="5mp-3s-hBV">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5mp-3s-hBV" id="Drb-Ub-fG4">
                                     <frame key="frameInset" width="375" height="43"/>
@@ -210,22 +230,22 @@
             <point key="canvasLocation" x="3410" y="59"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ymC-Uw-nD0">
+        <scene sceneID="Kfa-sE-oWw">
             <objects>
-                <navigationController storyboardIdentifier="HomeNav" automaticallyAdjustsScrollViewInsets="NO" id="tQz-1V-aWw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9iG-Kz-Qdj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PBS-E3-wID">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JWi-73-WY9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dge-fi-Zzi" kind="relationship" relationship="rootViewController" id="yvT-mT-xbe"/>
+                        <segue destination="lpI-Zz-hG3" kind="relationship" relationship="rootViewController" id="YNO-BP-RSu"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0w8-c9-cOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wEe-XR-4gg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877.60000000000002" y="58.920539730134934"/>
+            <point key="canvasLocation" x="36" y="59"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.2101247903" alpha="1" colorSpace="calibratedWhite"/>

@@ -41,7 +41,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 }
             })
         }
-    
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
