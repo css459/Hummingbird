@@ -11,6 +11,21 @@ import AVFoundation
 
 class Humm: NSObject {
     
+    // MARK: - Class Properties
+    
+    var poster: String?
+    var audioFilePath: String?
+    var upVotes: UInt?
+    var downVotes: UInt?
+    var netVotes: Int?
+    var genre: Genres?
+    
+    enum Genres {
+        case rock
+        case indie
+        case electronic
+    }
+    
     // MARK: - Initalizers
     
     override init() {
