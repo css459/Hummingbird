@@ -72,7 +72,16 @@
                     <view key="view" contentMode="scaleToFill" id="7wD-x1-Yhx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="5LB-DC-vsJ"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.51120389470000005" blue="0.45607003229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5LB-DC-vsJ" firstAttribute="centerY" secondItem="7wD-x1-Yhx" secondAttribute="centerY" id="28l-QO-p5G"/>
+                            <constraint firstItem="5LB-DC-vsJ" firstAttribute="top" secondItem="3Rg-p9-UUz" secondAttribute="bottom" constant="144" id="9Du-SW-iFZ"/>
+                            <constraint firstItem="5LB-DC-vsJ" firstAttribute="leading" secondItem="7wD-x1-Yhx" secondAttribute="leadingMargin" constant="46" id="Qy0-QL-p0h"/>
+                            <constraint firstItem="5LB-DC-vsJ" firstAttribute="centerX" secondItem="7wD-x1-Yhx" secondAttribute="centerX" id="zJP-K4-r9w"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kd3-w7-dDM">
                         <barButtonItem key="leftBarButtonItem" title="User Name" id="SF7-F8-Ogb">
@@ -88,6 +97,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nameButton" destination="SF7-F8-Ogb" id="lZm-1n-DSA"/>
+                        <outlet property="pausePlayImage" destination="5LB-DC-vsJ" id="mC6-79-wOS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yam-86-emk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -255,6 +265,7 @@
     </scenes>
     <resources>
         <image name="logo" width="1000" height="1000"/>
+        <image name="play" width="1000" height="1000"/>
     </resources>
     <color key="tintColor" white="0.2101247903" alpha="1" colorSpace="calibratedWhite"/>
 </document>
