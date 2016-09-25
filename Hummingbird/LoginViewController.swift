@@ -18,6 +18,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.facebookLogin.delegate = self
+        self.facebookLogin.readPermissions = ["public_profile", "email", "user_friends"]
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,18 +30,21 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if let err = error {
             // Process error
-            print(err)
+            print(err.localizedDescription)
         } else if result.isCancelled {
             // Handle cancellations
             print("cancelled")
         } else {
             // Navigate to other view
             let creds = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-            FIRAuth.auth()?.signIn(with: creds, completion: { (user, error) in
-                print(user)
-            })
             
-            print("success")
+            FIRAuth.auth()?.signIn(with: creds, completion: { (user, error) in
+                if let e = error {
+                    print(e)
+                } else {
+                    print(user?.displayName)
+                }
+            })
         }
     
     }
