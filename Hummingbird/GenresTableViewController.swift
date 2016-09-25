@@ -8,11 +8,14 @@
 
 import UIKit
 
-class GenresTableViewController: UITableViewController {
+protocol SendGenreBack: class {
+    func sendGenre(genre: String)
+}
 
+class GenresTableViewController: UITableViewController {
+    
     // MARK: - Class Properties
-    var humm: Humm?
-    var backRef: NewRecordingViewController?
+    weak var delegate: SendGenreBack? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +40,7 @@ class GenresTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        backRef?.newHumm?.genre = Humm.genres[indexPath.row]
-//        performSegue(withIdentifier: "toNewRecording", sender: self)
-        dismiss(animated: true, completion: nil)
+        delegate?.sendGenre(genre: Humm.genres[indexPath.row])
+        self.navigationController?.popViewController(animated: true)
     }
-    
-    // MARK: - Navigation
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toNewRecording" {
-//            let vc = segue.destination as! NewRecordingViewController
-//            vc.newHumm = humm
-//        }
-//    }
 }

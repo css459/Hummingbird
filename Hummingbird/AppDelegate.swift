@@ -21,10 +21,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         
+        // Init Singletons
         let _ = DataManager.sharedManager
         let am = AudioManager.sharedManager
         
         let _ = am.requestMicrophone()
+        // Request the microphone
+        _ = am.requestMicrophone()
+        
+        // Check already logged in
+        if FIRAuth.auth()?.currentUser != nil {
+            // User is signed in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let rootController = storyboard.instantiateViewController(withIdentifier: "HomeNav") as! UINavigationController
+            if let window = self.window{
+                window.rootViewController = rootController
+            }
+        }
     
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }

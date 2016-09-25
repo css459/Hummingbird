@@ -39,7 +39,7 @@
         <!--Home-->
         <scene sceneID="MNJ-QW-ZU7">
             <objects>
-                <viewController title="Home" id="dge-fi-Zzi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" id="dge-fi-Zzi" customClass="HomeViewController" customModule="Hummingbird" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Rg-p9-UUz"/>
                         <viewControllerLayoutGuide type="bottom" id="xXL-dH-qOy"/>
@@ -50,16 +50,43 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kd3-w7-dDM">
+                        <barButtonItem key="leftBarButtonItem" title="User Name" style="plain" id="SF7-F8-Ogb">
+                            <connections>
+                                <segue destination="lg7-Ym-9sL" kind="show" identifier="toUserPage" id="NVG-yP-jYf"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nWt-54-C6D">
                             <connections>
                                 <segue destination="iK9-8a-4aB" kind="show" id="AYA-7b-g3Q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameButton" destination="SF7-F8-Ogb" id="lZm-1n-DSA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yam-86-emk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1816.8" y="58.920539730134934"/>
+        </scene>
+        <!--My Posts-->
+        <scene sceneID="rwz-hh-W2k">
+            <objects>
+                <viewController id="lg7-Ym-9sL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="12g-KP-J8d"/>
+                        <viewControllerLayoutGuide type="bottom" id="n18-u7-bvF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YBx-9u-rYk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Posts" id="b5a-Mi-38A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oIm-3N-fui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1817" y="782"/>
         </scene>
         <!--New Recording-->
         <scene sceneID="1Ty-FE-oKZ">
@@ -98,7 +125,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Genre"/>
                                 <connections>
-                                    <segue destination="5iA-iE-YeE" kind="presentation" identifier="toGenres" id="0jA-7i-apd"/>
+                                    <segue destination="5iA-iE-YeE" kind="show" identifier="toGenres" id="ymk-eF-7jl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,7 +139,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Humm" id="otJ-zF-0Tk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Eqr-qV-LZ8"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Eqr-qV-LZ8">
+                            <connections>
+                                <action selector="cancelPressed:" destination="iK9-8a-4aB" id="FnG-dd-cw4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="recordButton" destination="cNO-9I-AKu" id="YNv-Fr-vgH"/>
@@ -132,13 +163,13 @@
                         <color key="backgroundColor" red="1" green="0.51120389470000005" blue="0.45607003229999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" textLabel="kw6-ay-sQc" style="IBUITableViewCellStyleDefault" id="5mp-3s-hBV">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5mp-3s-hBV" id="Drb-Ub-fG4">
                                     <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Rock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kw6-ay-sQc">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kw6-ay-sQc">
                                             <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -155,15 +186,16 @@
                             <outlet property="delegate" destination="5iA-iE-YeE" id="rRl-nM-J5i"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="yVB-dA-AbO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4M-IH-96v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3428" y="59"/>
+            <point key="canvasLocation" x="3410" y="59"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ymC-Uw-nD0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tQz-1V-aWw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNav" automaticallyAdjustsScrollViewInsets="NO" id="tQz-1V-aWw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PBS-E3-wID">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
