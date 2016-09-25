@@ -401,7 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Hummingbird/Hummingbird.entitlements;
-				DEVELOPMENT_TEAM = 8KWT8DCUF8;
+				DEVELOPMENT_TEAM = 626TEZTB77;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/FirebaseStorage/Frameworks",
@@ -420,7 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Hummingbird/Hummingbird.entitlements;
-				DEVELOPMENT_TEAM = 8KWT8DCUF8;
+				DEVELOPMENT_TEAM = 626TEZTB77;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/FirebaseStorage/Frameworks",

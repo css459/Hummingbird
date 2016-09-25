@@ -59,7 +59,7 @@ class NewRecordingViewController: UIViewController {
 //        })
         
         let am = AudioManager.sharedManager
-//        am.record()
+        _ = am.record()
     }
     
     @IBAction func cancelPressed(_ sender: AnyObject) {
